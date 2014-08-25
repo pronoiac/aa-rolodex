@@ -40,4 +40,3 @@ gem 'spring',        group: :development
 
 gem 'addressable'
 gem 'rest-client'
-
