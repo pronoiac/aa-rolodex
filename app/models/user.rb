@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
   
+  #the link between user and a contact that was shared with her/him.
+  #utilitarian association to allow for shared_contacts
   has_many(
     :contact_shares,
     class_name: "ContactShare",
@@ -15,6 +17,7 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
   
+  #a contact that was shared with the user
   has_many(
     :shared_contacts,
     through: :contact_shares,
